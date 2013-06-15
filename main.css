@@ -1,0 +1,182 @@
+/* main.css kanri.dev example development site */
+
+@import url(/-/jsm/kanri.css?v=201303261614);
+
+/* FIXME - бага даркбокса в сочетании с этим конкретным шаблоном ! */
+.darkbox .darkbox-canvas {
+	margin:-250px 0 0 -500px;
+	width:1000px;
+	height:500px;
+}
+
+body {
+	font-family:"lucida grande", tahoma, helvetica, arial, sans-serif;
+}
+body:before { /* top shadow */ 
+	content: ""; 
+	position: fixed; 
+	top: -10px; 
+	left: -10px; 
+	width: 110%; 
+	height: 10px;  
+	-webkit-box-shadow: 0px 0px 10px rgba(0,0,0,.8); 
+	-moz-box-shadow: 0px 0px 10px rgba(0,0,0,.8); 
+	-ms-box-shadow: 0px 0px 10px rgba(0,0,0,.8); 
+	box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+	z-index: 100; 
+}
+
+.container {
+	background:white;
+}
+
+header {
+	padding:10px 0 0 0;
+}
+
+footer { 
+	color:gray;
+	font-size:10px;
+}
+	footer a { color:gray; }
+
+h1, h2, h3 {
+	font-family: sans-serif;
+	font-weight:normal;
+	line-height:1.2;
+}
+	h1 {
+		font-size:28px;
+		line-height:1;
+		padding-top:0;
+		margin-top:0;
+	}
+	h2 {
+		font-weight:normal;
+		font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+		text-transform: uppercase;
+		color: rgba(0,0,0,.3);
+		text-shadow: 0px 1px 0px rgba(255,255,255,.7), 0 0 0px rgba(0,0,0,.2);
+		font-size: 22px;
+		line-height:1;
+	}
+	h3 {
+		line-height:1;
+		color:gray;
+	}
+
+/*mainnav*/
+.navbar .navbar-inner .nav .li a {
+	color:red;
+	font-variant:small-caps;
+}
+
+/*каталог*/
+.nav-header {
+	padding:0;
+}
+#partitions ul {
+	padding:0;
+	margin-bottom:10px;
+}
+	#partitions ul li a, #partitions ul li span {
+		line-height:1;
+		margin:2px 0 6px 1px !important;
+		padding:0 0 0 5px !important;
+		border-left:3px solid #BEBEBE;
+	}
+	#partitions ul li ul {
+		list-style-type:square !important;
+		margin:-5px 0 10px 20px !important;
+		padding-left:5px !important;
+		font-size:11px;
+	}
+		#partitions ul li ul li {
+			color:#BEBEBE;
+		}
+		#partitions ul li ul li a, #partitions ul li ul li span {
+			line-height:1;
+			margin:0 !important;
+			padding:0 !important;
+			border-left:none;
+			height:18px;
+		}
+	#partitions li.active span {
+		color:#BC0202;
+	}
+	
+.categor-ico {
+	margin:0 10px 0 0;
+}
+						
+/* бейджики акций (лента в правом верхнем углу) */
+.ribboned {
+	height: 200px;
+	background: white;
+	border-radius: 5px;
+	-webkit-box-shadow: 0px 0px 8px rgba(0,0,0,0.3);
+	-moz-box-shadow:    0px 0px 8px rgba(0,0,0,0.3);
+	box-shadow:         0px 0px 8px rgba(0,0,0,0.3);
+	position: relative;
+	float:left; 
+	padding:10px;
+}
+	.ribbon-wrapper {
+		width: 85px;
+		height: 88px;
+		overflow: hidden;
+		position: absolute;
+		top: -2px;
+		right: -2px;
+	}
+	.ribbon {
+		color: #6a6340;
+		font: bold 15px Sans-Serif;
+		text-align: center;
+		text-shadow: rgba(255,255,255,0.5) 0px 1px 0px;
+		-webkit-transform: rotate(45deg);
+		-moz-transform:    rotate(45deg);
+		-ms-transform:     rotate(45deg);
+		-o-transform:      rotate(45deg);
+		position: relative;
+		padding: 7px 0;
+		left: -5px;
+		top: 15px;
+		width: 120px;
+		-webkit-box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
+		-moz-box-shadow:    0px 0px 3px rgba(0,0,0,0.3);
+		box-shadow:         0px 0px 3px rgba(0,0,0,0.3);
+	}
+	.ribbon:before, .ribbon:after {
+		content: "";
+		border-top:   1px solid #6e8900;   
+		border-left:  1px solid transparent;
+		border-right: 1px solid transparent;
+		position:absolute;
+		bottom: -1px;
+	}
+	.ribbon:before { left: 0; }
+	.ribbon:after { right: 0; }
+.ribbon-green {
+	background-color: #BFDC7A;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#BFDC7A), to(#8EBF45)); 
+	background-image: -webkit-linear-gradient(top, #BFDC7A, #8EBF45); 
+	background-image:    -moz-linear-gradient(top, #BFDC7A, #8EBF45); 
+	background-image:     -ms-linear-gradient(top, #BFDC7A, #8EBF45); 
+	background-image:      -o-linear-gradient(top, #BFDC7A, #8EBF45); 
+}
+.ribbon-red {
+	background-color: #DC5B50;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#DC5B50), to(#BF5E0D)); 
+	background-image: -webkit-linear-gradient(top, #DC5B50, #BF5E0D); 
+	background-image:    -moz-linear-gradient(top, #DC5B50, #BF5E0D); 
+	background-image:     -ms-linear-gradient(top, #DC5B50, #BF5E0D); 
+	background-image:      -o-linear-gradient(top, #DC5B50, #BF5E0D); 
+	color:white;
+}
+
+	
+	
+	
+	
+	
